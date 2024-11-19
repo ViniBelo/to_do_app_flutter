@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_app_flutter/view/login/components/login_form_field.dart';
-import 'package:to_do_app_flutter/view/login/components/sign_in_button.dart';
+import 'package:to_do_app_flutter/view/authentication/components/login_form_field.dart';
+import 'package:to_do_app_flutter/view/authentication/components/sign_in_button.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
+
+  onSignUpPressed() {
+    
+  }
 
   onSignInPressed() {
 
@@ -19,7 +23,7 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 60, bottom: 60),
+                padding: EdgeInsets.only(top: 100, bottom: 100),
                 child: Text(
                   "Login",
                   style: TextStyle(
@@ -38,6 +42,18 @@ class LoginScreen extends StatelessWidget {
               ),
               SignInButton(
                 onSignInPressed: onSignInPressed,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account? Sign Up "),
+                  Text(
+                    "here",
+                    style: TextStyle(
+                      color: Colors.blueAccent
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
