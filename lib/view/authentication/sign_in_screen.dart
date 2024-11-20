@@ -16,6 +16,7 @@ class SignInScreen extends StatelessWidget {
       );
     }
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(40),
@@ -23,9 +24,9 @@ class SignInScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 100, bottom: 100),
+                padding: EdgeInsets.only(top: 20, bottom: 100),
                 child: Text(
-                  "Login",
+                  "Sign In",
                   style: TextStyle(
                       fontSize: 48
                   ),

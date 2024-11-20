@@ -10,6 +10,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(40),
@@ -17,11 +18,11 @@ class SignUpScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 100, bottom: 100),
+                padding: EdgeInsets.only(top: 15, bottom: 100),
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
-                      fontSize: 48
+                      fontSize: 48,
                   ),
                 ),
               ),
