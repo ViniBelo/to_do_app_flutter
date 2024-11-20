@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
-class SignInButton extends StatelessWidget {
-  const SignInButton({super.key, required this.onSignInPressed});
+class FullWidthButton extends StatelessWidget {
+  const FullWidthButton({
+    super.key,
+    required this.onPressed,
+    required this.labelText
+  });
 
-  final Function()? onSignInPressed;
+  final Function()? onPressed;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +20,17 @@ class SignInButton extends StatelessWidget {
               shape: WidgetStatePropertyAll(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
-                  )
-              )
+                  ),
+              ),
           ),
-          onPressed: onSignInPressed,
-          child: const SizedBox(
+          onPressed: onPressed,
+          child: SizedBox(
             width: double.infinity,
             height: 60,
             child: Center(
               child: Text(
-                "Sign In",
-                style: TextStyle(
+                labelText,
+                style: const TextStyle(
                     fontSize: 24
                 ),
               ),

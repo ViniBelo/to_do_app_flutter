@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_app_flutter/view/authentication/components/login_form_field.dart';
-import 'package:to_do_app_flutter/view/authentication/components/sign_in_button.dart';
+import 'package:to_do_app_flutter/view/authentication/components/my_text_form_field.dart';
+import 'package:to_do_app_flutter/view/authentication/components/full_width_button.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignInScreen extends StatelessWidget {
+  const SignInScreen({super.key});
 
-  onSignUpPressed() {
-    
-  }
-
-  onSignInPressed() {
-
-  }
+  onSignInPressed() { }
 
   @override
   Widget build(BuildContext context) {
+    onSignUpPressed() {
+      Navigator.pushNamed(
+          context,
+          '/signUp'
+      );
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -31,26 +31,30 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const LoginFormField(
+              const MyTextFormField(
                 labelText: "Email",
                 prefixIcon: Icon(Icons.email_sharp),
               ),
-              const LoginFormField(
+              const MyTextFormField(
                 labelText: "Password",
                 prefixIcon: Icon(Icons.lock),
                 obscureText: true,
               ),
-              SignInButton(
-                onSignInPressed: onSignInPressed,
+              FullWidthButton(
+                onPressed: onSignInPressed,
+                labelText: "Sign In",
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account? Sign Up "),
-                  Text(
-                    "here",
-                    style: TextStyle(
-                      color: Colors.blueAccent
+                  const Text("Don't have an account? Sign Up "),
+                  GestureDetector(
+                    onTap: onSignUpPressed,
+                    child: const Text(
+                      "here",
+                      style: TextStyle(
+                        color: Colors.blueAccent
+                      ),
                     ),
                   ),
                 ],

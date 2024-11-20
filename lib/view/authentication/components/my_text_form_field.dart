@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginFormField extends StatelessWidget {
-  const LoginFormField({
+class MyTextFormField extends StatelessWidget {
+  const MyTextFormField({
     super.key,
     required this.labelText,
     this.obscureText = false,
