@@ -35,6 +35,11 @@ class SignUpScreen extends StatelessWidget {
                 prefixIcon: Icon(Icons.lock),
                 obscureText: true,
               ),
+              const MyTextFormField(
+                labelText: "Repeat Password",
+                prefixIcon: Icon(Icons.lock),
+                obscureText: true,
+              ),
               FullWidthButton(
                 onPressed: onSignUpPressed,
                 labelText: 'Sign Up',
