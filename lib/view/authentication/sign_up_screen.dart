@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_app_flutter/data/model/sign_up_req_params.dart';
+import 'package:to_do_app_flutter/data/model/authentication/sign_up_req_params.dart';
 import 'package:to_do_app_flutter/services/authentication/authentication_service_impl.dart';
 import 'package:to_do_app_flutter/view/authentication/components/full_width_button.dart';
 import 'package:to_do_app_flutter/view/authentication/components/my_text_form_field.dart';

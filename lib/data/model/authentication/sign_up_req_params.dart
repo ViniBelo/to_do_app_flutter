@@ -3,7 +3,6 @@ class SignUpReqParams {
   final String password;
   final String repeatPassword;
 
-
   Map<String, dynamic> toMap() {
     return <String, dynamic> {
       "user": {
