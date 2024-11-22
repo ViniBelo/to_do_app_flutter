@@ -3,7 +3,11 @@ import 'package:to_do_app_flutter/view/authentication/components/full_width_butt
 import 'package:to_do_app_flutter/view/authentication/components/my_text_form_field.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+  SignUpScreen({super.key});
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController repeatPasswordController = TextEditingController();
 
   onSignUpPressed() { }
 
@@ -26,18 +30,21 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const MyTextFormField(
+              MyTextFormField(
+                controller: emailController,
                 labelText: "Email",
-                prefixIcon: Icon(Icons.email_sharp),
+                prefixIcon: const Icon(Icons.email_sharp),
               ),
-              const MyTextFormField(
+              MyTextFormField(
+                controller: passwordController,
                 labelText: "Password",
-                prefixIcon: Icon(Icons.lock),
+                prefixIcon: const Icon(Icons.lock),
                 obscureText: true,
               ),
-              const MyTextFormField(
+              MyTextFormField(
+                controller: repeatPasswordController,
                 labelText: "Repeat Password",
-                prefixIcon: Icon(Icons.lock),
+                prefixIcon: const Icon(Icons.lock),
                 obscureText: true,
               ),
               FullWidthButton(
